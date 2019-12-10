@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#keyHandle" prefHeight="996.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainController">
+   <children>
+      <Canvas fx:id="maincanvas" height="983.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickHandle" onMouseDragged="#clickHandle" width="975.0" />
+      <Button layoutX="991.0" layoutY="10.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="66.0" prefWidth="301.0" text="그림판 초기화">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Canvas fx:id="minimap" height="272.0" layoutX="991.0" layoutY="77.0" width="293.0" />
+      <Label alignment="CENTER" layoutX="958.0" layoutY="348.0" prefHeight="2.0" prefWidth="328.0" text="↑미리보기↑" textAlignment="JUSTIFY" />
+      <Label layoutX="991.0" layoutY="369.0" prefHeight="29.0" prefWidth="60.0" text="키보드 1번">
+         <font>
+            <Font name="Batang" size="12.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cp1" layoutX="1051.0" layoutY="369.0" onAction="#getColor1" prefHeight="29.0" prefWidth="84.0" />
+      <Button layoutX="985.0" layoutY="895.0" mnemonicParsing="false" onAction="#exportToPng" prefHeight="101.0" prefWidth="301.0" text="이미지 파일로 내보내기">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="991.0" layoutY="398.0" prefHeight="29.0" prefWidth="60.0" text="키보드 2번">
+         <font>
+            <Font name="Batang" size="12.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cp2" layoutX="1051.0" layoutY="398.0" onAction="#getColor2" prefHeight="29.0" prefWidth="84.0" />
+      <Label layoutX="991.0" layoutY="427.0" prefHeight="29.0" prefWidth="60.0" text="키보드 3번">
+         <font>
+            <Font name="Batang" size="12.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cp3" layoutX="1051.0" layoutY="427.0" onAction="#getColor3" prefHeight="29.0" prefWidth="84.0" />
+      <Label layoutX="1142.0" layoutY="379.0" prefHeight="29.0" prefWidth="60.0" text="키보드 4번">
+         <font>
+            <Font name="Batang" size="12.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cp4" layoutX="1202.0" layoutY="379.0" onAction="#getColor4" prefHeight="29.0" prefWidth="84.0" />
+      <Label layoutX="1142.0" layoutY="411.0" prefHeight="29.0" prefWidth="60.0" text="키보드 5번">
+         <font>
+            <Font name="Batang" size="12.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cp5" layoutX="1202.0" layoutY="416.0" onAction="#getColor5" prefHeight="29.0" prefWidth="84.0" />
+      <Label alignment="CENTER" layoutX="996.0" layoutY="493.0" prefHeight="40.0" prefWidth="293.0" text="마우스 우클릭 : 지우개">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Canvas fx:id="checkcolor" height="29.0" layoutX="1076.0" layoutY="539.0" width="48.0" />
+      <Label layoutX="984.0" layoutY="533.0" prefHeight="40.0" prefWidth="92.0" text="현재 색 :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="smallbtn" layoutX="1080.0" layoutY="657.0" mnemonicParsing="false" onAction="#small" prefHeight="53.0" prefWidth="60.0" text="얇게" />
+      <Button fx:id="bigbtn" layoutX="1139.0" layoutY="657.0" mnemonicParsing="false" onAction="#bigpen" prefHeight="53.0" prefWidth="60.0" text="굵게" />
+      <Label layoutX="988.0" layoutY="657.0" prefHeight="53.0" prefWidth="84.0" text="펜 크기 : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="fill" layoutX="987.0" layoutY="579.0" mnemonicParsing="false" onAction="#fillclick" prefHeight="53.0" prefWidth="84.0" text="채우기">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="pen" layoutX="1069.0" layoutY="579.0" mnemonicParsing="false" onAction="#penclick" prefHeight="53.0" prefWidth="60.0" text="펜">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="spuit" layoutX="1129.0" layoutY="579.0" mnemonicParsing="false" onAction="#spuitclick" prefHeight="53.0" prefWidth="84.0" text="스포이트">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Canvas fx:id="spuitcanvas" height="21.0" layoutX="1168.0" layoutY="456.0" width="84.0" />
+      <Label layoutX="1051.0" layoutY="456.0" prefHeight="21.0" prefWidth="118.0" text="키보드 6번(스포이트)" />
+   </children>
+</AnchorPane>
